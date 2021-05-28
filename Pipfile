@@ -11,6 +11,8 @@ streamlit = "*"
 spacy = "*"
 nltk = "*"
 ghostscript = "*"
+plotly = "*"
+matplotlib = "*"
 
 [dev-packages]
 
