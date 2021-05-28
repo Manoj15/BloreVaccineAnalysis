@@ -24,16 +24,17 @@ st.title('Bangalore COVID-19 Vaccines Slot Availability Analysis')
 
 # Fetch Data from Twitter
 # st.set_page_config(page_title=None, page_icon=None, layout='centered', initial_sidebar_state='auto')
-@st.cache
-def fetch_data():
-    # This function will only be run the first time it's called
-    fetch_tweet.fetch_data()
+# @st.cache
+# Not working since heroku does not allow to scrape twitter
+# def fetch_data():
+#     # This function will only be run the first time it's called
+#     fetch_tweet.fetch_data()
 
-fetch_data()
+# fetch_data()
 
 
 # Date Read
-tweets_df2 = pd.read_csv('app_data.csv')
+tweets_df2 = pd.read_csv('https://raw.githubusercontent.com/Manoj15/BloreVaccineAnalysis/main/app_data.csv')
 tweets_df2['Datetime'] = pd.to_datetime(tweets_df2['Datetime'])
 
 st.sidebar.markdown("## Data Filter")
