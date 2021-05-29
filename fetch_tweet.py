@@ -55,7 +55,7 @@ def preprocess(df):
 
     return df
 
-def fetch_data():
+if __name__ == '__main__':
     # Creating list to append tweet data
     tweets_list1 = []
 
